@@ -71,7 +71,7 @@ const server = http.createServer(async (req, res) => {
     const file = await readFile(publicPath);
     res.writeHead(200, {
       "content-type": contentTypes[extname(publicPath)] || "application/octet-stream",
-      "cache-control": pathname === "/widget.js" ? "public, max-age=300" : "no-store"
+      "cache-control": "no-store"
     });
     res.end(file);
   } catch (error) {
