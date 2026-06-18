@@ -1,7 +1,7 @@
 (() => {
   const defaults = {
     apiBaseUrl: "",
-    brandName: "Support",
+    brandName: "GATEKEPT",
     primaryColor: "#f64e9a",
     darkColor: "#0f0f0f",
     lightColor: "#f5f5f5",
@@ -86,11 +86,11 @@
       <form class="sfop-track-form">
         <label>
           <span>Order number</span>
-          <input name="orderNumber" type="text" autocomplete="off" placeholder="#1234" required>
+          <input name="orderNumber" type="text" autocomplete="off" placeholder="1234" required>
         </label>
         <label>
           <span>Phone number</span>
-          <input name="phone" type="tel" autocomplete="tel" placeholder="Phone used on order" required>
+          <input name="phone" type="tel" autocomplete="tel" placeholder="9999942067" required>
         </label>
         <button class="sfop-submit" type="submit" ${state.loading ? "disabled" : ""}>
           ${state.loading ? "Checking..." : "Get tracking link"}
