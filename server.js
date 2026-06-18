@@ -204,6 +204,8 @@ async function handleShopifyCallback(req, res, url) {
   sendHtml(res, 200, `
     <h1>Shopify connected</h1>
     <p>The tracking popup can now read orders for ${escapeHtml(shop)}.</p>
+    <p>To keep this connected after Render redeploys, copy this token into Render as <strong>SHOPIFY_ADMIN_ACCESS_TOKEN</strong>.</p>
+    <textarea readonly style="box-sizing:border-box;font:14px monospace;min-height:120px;width:100%;">${escapeHtml(payload.access_token)}</textarea>
   `);
 }
 
