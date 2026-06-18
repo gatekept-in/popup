@@ -145,8 +145,7 @@
         if (!response.ok) throw new Error(payload.error || "Could not track this order.");
 
         setTrackMessage(`
-          <strong>AWB: ${escapeHtml(payload.awb)}</strong>
-          <a href="${escapeAttribute(payload.trackingUrl)}" target="_blank" rel="noopener">Open Shiprocket tracking</a>
+          <a class="sfop-track-link" href="${escapeAttribute(payload.trackingUrl)}" target="_blank" rel="noopener">TRACK HERE</a>
         `);
       } catch (error) {
         setTrackMessage(`<span class="sfop-error">${escapeHtml(error.message)}</span>`);
@@ -403,6 +402,11 @@
         display: block;
         font-weight: 850;
         margin-top: 4px;
+      }
+
+      .sfop-track-link {
+        font-size: 20px;
+        letter-spacing: 0;
       }
 
       .sfop-error {
