@@ -7,20 +7,20 @@
     lightColor: "#f5f5f5",
     faqs: [
       {
-        question: "How long does delivery take?",
-        answer: "Most orders are delivered within 3-7 business days after dispatch."
+        question: "WHEN WILL MY ORDER GET DELIVERED?",
+        answer: "Most orders arrive within 5 to 10 business days. During festive seasons or public holidays, shipping may take a little longer."
       },
       {
-        question: "How can I change my address?",
-        answer: "Please contact support as soon as possible. Address changes are only possible before dispatch."
+        question: "DO YOU SHIP TO ALL PARTS OF INDIA?",
+        answer: "Yes! We deliver PAN India, so your order can reach you wherever you are."
       },
       {
-        question: "What is your return policy?",
-        answer: "Returns are accepted according to the policy listed on our store. Please keep the product unused and in its original packaging."
+        question: "ARE RETURNS OR EXCHANGES POSSIBLE?",
+        answer: "Size-related exchanges are available. A small return fee of Rs.100-Rs.150 (based on order weight/quantity) applies, and exchanges are subject to size availability. If the requested size is unavailable, a refund will be issued after return and quality check."
       },
       {
-        question: "When will my order be shipped?",
-        answer: "Orders are usually dispatched within 24-48 business hours."
+        question: "IS CASH ON DELIVERY (COD) AVAILABLE?",
+        answer: "Yes, COD is one of the payment options you can select at checkout."
       }
     ]
   };
