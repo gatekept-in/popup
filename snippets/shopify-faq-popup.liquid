@@ -1,0 +1,28 @@
+<script>
+  window.ShopifyFaqPopupConfig = {
+    apiBaseUrl: "https://YOUR-POPUP-SERVER-DOMAIN.com",
+    brandName: "{{ shop.name | escape }}",
+    primaryColor: "#f64e9a",
+    darkColor: "#0f0f0f",
+    lightColor: "#f5f5f5",
+    faqs: [
+      {
+        question: "How long does delivery take?",
+        answer: "Most orders are delivered within 3-7 business days after dispatch."
+      },
+      {
+        question: "How can I change my address?",
+        answer: "Please contact support as soon as possible. Address changes are only possible before dispatch."
+      },
+      {
+        question: "What is your return policy?",
+        answer: "Returns are accepted according to the policy listed on our store. Please keep the product unused and in its original packaging."
+      },
+      {
+        question: "When will my order be shipped?",
+        answer: "Orders are usually dispatched within 24-48 business hours."
+      }
+    ]
+  };
+</script>
+<script src="https://YOUR-POPUP-SERVER-DOMAIN.com/widget.js" defer></script>

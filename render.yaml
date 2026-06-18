@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: gatekept-popup
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /health
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: SHOPIFY_API_VERSION
+        value: 2026-04
+      - key: SHOPIFY_SCOPES
+        value: read_orders
+      - key: SHIPROCKET_TRACKING_URL_TEMPLATE
+        value: https://shiprocket.co/tracking/{awb}
+      - key: SHOPIFY_SHOP_DOMAIN
+        sync: false
+      - key: SHOPIFY_API_KEY
+        sync: false
+      - key: SHOPIFY_API_SECRET
+        sync: false
+      - key: APP_URL
+        sync: false
