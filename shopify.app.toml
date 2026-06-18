@@ -1,0 +1,12 @@
+client_id = "c3cabbc3227161e5f4f1a6acd99f8ef8"
+name = "Codex Popup"
+application_url = "https://gatekept-popup.onrender.com/auth/shopify"
+embedded = false
+
+[access_scopes]
+scopes = "read_orders"
+
+[auth]
+redirect_urls = [
+  "https://gatekept-popup.onrender.com/auth/callback"
+]
