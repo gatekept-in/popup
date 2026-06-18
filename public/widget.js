@@ -38,7 +38,12 @@
   function render() {
     return `
       <button class="sfop-launcher" type="button" aria-label="Open support">
-        <span>?</span>
+        <svg class="sfop-launcher-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M5.2 5.7A7.7 7.7 0 0 1 12 2.5h.2c4.3.1 7.8 3.4 7.8 7.5s-3.5 7.5-7.9 7.5h-.8a8.6 8.6 0 0 1-3-.6l-4.1 2.2c-.4.2-.9-.1-.8-.6l.8-4.1A7.2 7.2 0 0 1 4 10c0-1.6.4-3 1.2-4.3Z"/>
+          <circle cx="8.8" cy="10.1" r="1"/>
+          <circle cx="12" cy="10.1" r="1"/>
+          <circle cx="15.2" cy="10.1" r="1"/>
+        </svg>
       </button>
       <section class="sfop-panel" aria-live="polite" aria-hidden="${!state.open}">
         <header class="sfop-header">
@@ -210,6 +215,12 @@
 
       .sfop-launcher span {
         transform: translateY(-1px);
+      }
+
+      .sfop-launcher-icon {
+        fill: currentColor;
+        height: 30px;
+        width: 30px;
       }
 
       .sfop-panel {
