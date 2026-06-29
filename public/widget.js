@@ -54,7 +54,6 @@
         <header class="sfop-header">
           <div>
             ${config.logoUrl ? `<img class="sfop-logo" src="${escapeAttribute(config.logoUrl)}" alt="${escapeAttribute(config.brandName)}">` : `<p>${escapeHtml(config.brandName)}</p>`}
-            <h2>FAQ & order tracking</h2>
           </div>
           <button class="sfop-icon-button" type="button" data-sfop-close aria-label="Close">x</button>
         </header>
@@ -259,7 +258,7 @@
         display: flex;
         gap: 16px;
         justify-content: space-between;
-        padding: 18px;
+        padding: 13px 16px;
       }
 
       .sfop-header p,
@@ -277,9 +276,8 @@
       .sfop-logo {
         display: block;
         height: auto;
-        margin-bottom: 7px;
-        max-height: 28px;
-        max-width: 150px;
+        max-height: 30px;
+        max-width: 158px;
         object-fit: contain;
         object-position: left center;
       }
