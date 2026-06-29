@@ -2,6 +2,7 @@
   const defaults = {
     apiBaseUrl: "",
     brandName: "GATEKEPT",
+    logoUrl: "/gatekept-logo-pink.png",
     primaryColor: "#f64e9a",
     darkColor: "#0f0f0f",
     lightColor: "#f5f5f5",
@@ -21,12 +22,16 @@
       {
         question: "IS CASH ON DELIVERY (COD) AVAILABLE?",
         answer: "Yes, COD is one of the payment options you can select at checkout."
+      },
+      {
+        question: "ANY OTHER QUESTIONS?",
+        answer: "Contact us at contact@gatekept.in or @gatekept.in on instagram."
       }
     ]
   };
 
   const config = { ...defaults, ...(window.ShopifyFaqPopupConfig || {}) };
-  const state = { open: false, view: "faq", loading: false };
+  const state = { open: false, view: "track", loading: false };
 
   injectStyles();
   const root = document.createElement("div");
@@ -48,14 +53,14 @@
       <section class="sfop-panel" aria-live="polite" aria-hidden="${!state.open}">
         <header class="sfop-header">
           <div>
-            <p>${escapeHtml(config.brandName)}</p>
+            ${config.logoUrl ? `<img class="sfop-logo" src="${escapeAttribute(config.logoUrl)}" alt="${escapeAttribute(config.brandName)}">` : `<p>${escapeHtml(config.brandName)}</p>`}
             <h2>FAQ & order tracking</h2>
           </div>
           <button class="sfop-icon-button" type="button" data-sfop-close aria-label="Close">x</button>
         </header>
         <nav class="sfop-tabs" aria-label="Support options">
-          <button type="button" class="${state.view === "faq" ? "is-active" : ""}" data-sfop-view="faq">FAQ</button>
           <button type="button" class="${state.view === "track" ? "is-active" : ""}" data-sfop-view="track">Track order</button>
+          <button type="button" class="${state.view === "faq" ? "is-active" : ""}" data-sfop-view="faq">FAQ</button>
         </nav>
         <div class="sfop-content">
           ${state.view === "faq" ? faqView() : trackView()}
@@ -267,6 +272,16 @@
         font-size: 12px;
         font-weight: 800;
         text-transform: uppercase;
+      }
+
+      .sfop-logo {
+        display: block;
+        height: auto;
+        margin-bottom: 7px;
+        max-height: 28px;
+        max-width: 150px;
+        object-fit: contain;
+        object-position: left center;
       }
 
       .sfop-header h2 {
